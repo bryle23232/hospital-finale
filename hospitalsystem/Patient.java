@@ -24,7 +24,7 @@ class Patient extends JFrame implements ActionListener{
     
   
     JTextField t3, t4, t5, t6, t7, t8, t9;
-    JComboBox cb1;
+    JComboBox cb1, cb2, cb3;
     JTextField c3, c4, c5, c6, c7, c8, c9, c10, c11;
     JLabel l1, l2, l3, l4, l5, l6, l7, l8;
     JButton btnConfirm, btnClear, btnBack;
@@ -81,14 +81,10 @@ class Patient extends JFrame implements ActionListener{
      t6.setBounds(180, 335, 300, 30);
      add(t6);
      
-     l5 = new JLabel("Blood Group:");
+     l5 = new JLabel("Doctor's name:");
      l5.setBounds(20, 20, 200, 850);
      l5.setFont(new Font("Rockwell", Font.BOLD, 20));
      add(l5);
-     
-     t7 = new JTextField ();
-     t7.setBounds(180, 435, 300, 30);
-     add(t7);
      
      
      l6 = new JLabel("Age:");
@@ -137,9 +133,6 @@ class Patient extends JFrame implements ActionListener{
      l8.setFont(new Font("Rockwell", Font.BOLD, 20));
      add(l8);
      
-       c5 = new JTextField ();
-     c5.setBounds(1143, 130, 300, 30);
-     add(c5);
      
      
      l1 = new JLabel("Name of Tablets:");
@@ -211,13 +204,20 @@ class Patient extends JFrame implements ActionListener{
      
      
      
-     String[] Gender = {"Male","Female","None"};
+     String[] Gender = {"None","Male","Female","Others"};
      cb1 = new JComboBox(Gender); 
      cb1.setBounds(180, 635, 300, 30);
      add(cb1);
      
-      
+     String[] Name = {"None","Metformin","Neozep","Losartan", "Antibiotic", "Mefanamic", "Albuterol", "Antihistamines", "Biogesic", "Gabapentin", "Omeprazole"};
+     cb2 = new JComboBox(Name); 
+     cb2.setBounds(1143, 130, 300, 30);
+     add(cb2); 
      
+     String[] Doctor = {"None","Dr. Bryle Molina","Dr. Prince Figueroa","Dr. Nathaniel Daelo", "Dr. Johnny Sins"};
+     cb3 = new JComboBox(Doctor); 
+     cb3.setBounds(180, 435, 300, 30);
+     add(cb3); 
   
     
   
@@ -232,18 +232,15 @@ class Patient extends JFrame implements ActionListener{
         t3.setText("");
         t5.setText("");
         t6.setText("");
-        t7.setText("");
         t8.setText("");
         t9.setText("");
         c3.setText("");
         c4.setText("");
-        c5.setText("");
         c6.setText("");
         c7.setText("");
         c8.setText("");
         c9.setText("");
         c10.setText("");
-        c11.setText("");
         
         cb1.setSelectedIndex(0);
         
